@@ -1,0 +1,3534 @@
+{
+	"info": {
+		"_postman_id": "4fff598c-a993-4389-9bf0-70c657e7b84b",
+		"name": "Laravel Elasticsearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4271692"
+	},
+	"item": [
+		{
+			"name": "Table",
+			"item": [
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"table\": \"elasticsearch-dersler\",\r\n    \"analyzer\": \"standard\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/create-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"create-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/create-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"create-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:17:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:17:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "76"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IjE4aUZuV1FYUGJHNnI3Rit3R0ZROXc9PSIsInZhbHVlIjoiTVYvK0ZSV0FLWHBQVUpNT1FnSHd2NlhIUFJNTlA2TUsrdXlLWTI1b003bHkxWGpOM3dsOGt4ZCtTT3czNHZLd1h0ZTFJZVJvRzJMV0dmMnMzaitIaXhWQjVLaFVDdjZNc2xDaGhDbzE1UE1KWUxVSnNaWG1lT1VlRHdRcDNtZTAiLCJtYWMiOiJjMDlhYzdiNzg2MzhiNzg2ZmFlZThkNTFiNzNjZjUxZjI2NjUwMmZhN2M0YjQ2N2U2M2Q2ZTUxMmY0ZTIwMGE1IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 00:17:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"shards_acknowledged\": true,\n    \"index\": \"hey-this-is-table\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Table",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"elasticsearch-dersler\"\r\n }"
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/delete-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"delete-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/delete-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"delete-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:17:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:17:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Im9hU2U3dFVEcVlZaWxsWEZMaXFjTmc9PSIsInZhbHVlIjoiaDdIcmNsR1Bza2RJQW1vcUtUUUFkV2hQUXpsTWplNFpBbi94QWJGWk1Sd1pyRFY5a3RPWk1KaTM2eUNLT1I2QW1PeE51NDMrUCs3clNNUTBVQ2hwZEY4dVBqRElZdU1heDVZN3cralZRWVYxazBmUnMyRHBmOWZ5MmRzRi85Q0UiLCJtYWMiOiIyM2MzZmYwMGM4YjRlMzdhOTkxZGM2ZTk1MWM0ZjU0ODk0ZDZjYWJjZGQzNDZmMjVhMzE5NjU4NjA1YTUwM2MxIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 00:17:57 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Tables Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/get-tables-detail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"get-tables-detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tables Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/get-tables-detail",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"get-tables-detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:19:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:19:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "549"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IkpXNGhtUTVhbVJsenI1eTFRMkRuQ3c9PSIsInZhbHVlIjoiYTg1bzdCKzJ0dkV0UVJrYWdtWEFpS2swR2tOdXhBMWo3WWFnU004VE9GZWFuUGZQOGtlTXpJSXZjdFRJNytWVzY1THJjY2ZVc255Y2hoM0lkaFNnRXREUzNPN1JZdGRHQ3dEOEhXTXViR3hRN1pzbEJKWmd5aU4ySE05MDA3WEQiLCJtYWMiOiIxZmZhMGU2NzcyZDlkZjhlNDU0NmUzZmFlM2EwZjFkZjBkZmYzMmY2OTkzNGQzYTQ0NzIxZDA3MTFiOThlYTMxIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 00:19:57 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"umituz\": {\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"1\",\n                \"provided_name\": \"umituz\",\n                \"creation_date\": \"1669204832872\",\n                \"number_of_replicas\": \"1\",\n                \"uuid\": \"_AxRRr3SRx-T3N-A9qaRFQ\",\n                \"version\": {\n                    \"created\": \"8050099\"\n                }\n            }\n        }\n    },\n    \"ders\": {\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"1\",\n                \"provided_name\": \"ders\",\n                \"creation_date\": \"1667895234009\",\n                \"number_of_replicas\": \"1\",\n                \"uuid\": \"eCGcurFUTt660kiqHCSs8A\",\n                \"version\": {\n                    \"created\": \"8050099\"\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Tables",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/get-all-tables",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"get-all-tables"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/get-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"get-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:06:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 22:06:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "847"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InRDcUJjYllFK0N6ZWQ0ZXhrZks1UWc9PSIsInZhbHVlIjoiaU80bFdNUHptRzV0YlJTQ2hlZjVXS1NTeEF1ekg0UFhVcENGMjMwOElSek1zcUdpcHozaUZuQkZZSVp1K0ZJd0xWMi9janZhNVA0R2s1Zis0eURjdlJITHBpOWprclU1Y2doV1I5R0N1TFZsbWNPTnE2YkRvUnB6NTlKSHU3RlUiLCJtYWMiOiJmYzM4ODNlYjEwNTgyYzRjOTlmMDIwNWJjNmJiN2VkNmM5YjEwNjBmNWQ5NjMzMWYxN2FlMzhmNzNlMWE5MTQ1IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 00:06:04 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"umituz\": {\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"1\",\n                \"provided_name\": \"umituz\",\n                \"creation_date\": \"1669204832872\",\n                \"number_of_replicas\": \"1\",\n                \"uuid\": \"_AxRRr3SRx-T3N-A9qaRFQ\",\n                \"version\": {\n                    \"created\": \"8050099\"\n                }\n            }\n        }\n    },\n    \"hey-this-is-table\": {\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"3\",\n                \"provided_name\": \"hey-this-is-table\",\n                \"creation_date\": \"1669500010774\",\n                \"number_of_replicas\": \"2\",\n                \"uuid\": \"aayOqtuoS7K14VgYpp2EKA\",\n                \"version\": {\n                    \"created\": \"8050099\"\n                }\n            }\n        }\n    },\n    \"ders\": {\n        \"settings\": {\n            \"index\": {\n                \"routing\": {\n                    \"allocation\": {\n                        \"include\": {\n                            \"_tier_preference\": \"data_content\"\n                        }\n                    }\n                },\n                \"number_of_shards\": \"1\",\n                \"provided_name\": \"ders\",\n                \"creation_date\": \"1667895234009\",\n                \"number_of_replicas\": \"1\",\n                \"uuid\": \"eCGcurFUTt660kiqHCSs8A\",\n                \"version\": {\n                    \"created\": \"8050099\"\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Data",
+			"item": [
+				{
+					"name": "Add Data To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"ip-address\",\r\n     \"ip\": \"10.0.0.100\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/add-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"add-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Data To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1,\r\n     \"name\":\"Ümit\",\r\n     \"age\":26,\r\n     \"message\":\"Suckerrrr!\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/add-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"add-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:36:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:36:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "142"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X0c87d6c3e31843d65a19f07cd1694dc1"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlNkODRVOUpiRzZsK0JIZnBYV0V1Qnc9PSIsInZhbHVlIjoibTRGRmhEeG9pdTFqMWhEUGF6S1dGaHVqc1FMeTIzWUd2NHN2U1h1Y0ZnM2U1cnNmbnhsN0lCNEJqMDlJMGJWOXBjeElFZTlEdjJ1NXg5ZWcrUTZqWmM1ekpRK2twV1BtcER2QnNiYk9FL0lyaVN0bWhrN1B2NWVOZzhPQjdDMmgiLCJtYWMiOiI2ODA2YzE2MzA3MDdhODVmZmIwZDI5MTRjNDNiN2QwYTA2Njg0MjQ0N2NmNGFmYjU2Y2FjYWYxZTMzN2Y2Nzg5IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 13:36:54 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 2,\n    \"result\": \"updated\",\n    \"_shards\": {\n        \"total\": 2,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"_seq_no\": 1,\n    \"_primary_term\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data To Table",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1,\r\n     \"name\":\"Ümit\",\r\n     \"age\":26,\r\n     \"message\":\"Hey Ümit!\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/update-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"update-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Data To Table",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1,\r\n     \"name\":\"Ümit\",\r\n     \"age\":26,\r\n     \"message\":\"Hey whatsapp!\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/update-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"update-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:08:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:08:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "139"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X95275733c423d54871a29ad26d941778"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImNmVkowVDV0QUFzbFhucm1xeEx0TkE9PSIsInZhbHVlIjoiTzJaenBqeXMwNlUrRlgzSWRQN2N0d3MzdGVhVkU1azJVbDBuWFRYV3gvWVZmYlZhTHJudWtKSDBDZVBHbElpT21CY01VcWZiWEpFOUlONytJZEEycU1JQzJocVRBSnVreU10Q0JwNDJjNlhWWmRCenBnakdlS0x6eUNzTlFPNTAiLCJtYWMiOiJkZjkyZDQ4MGViM2M4YWM4NmYxNjgzZTdlNDkwMWU4ZTA5M2M2NTY5YjJiYWQyODdiNmRmMmUyNTQ3MTRlM2NkIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 14:08:31 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 3,\n    \"result\": \"noop\",\n    \"_shards\": {\n        \"total\": 0,\n        \"successful\": 0,\n        \"failed\": 0\n    },\n    \"_seq_no\": 2,\n    \"_primary_term\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Data To Table",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/get-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"get-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data To Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/get-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"get-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:56:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:56:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "150"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xc4cdbae829a229ac80d54a5e4804a628"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Inc5Mk1FazVEWVBBNXFnVkwyLzV6WXc9PSIsInZhbHVlIjoidHMzY2Y3TlpSMXJtZjlQVUJJOUQxVjdYTW5RR21wd3lra0toaitVeThRb2l5ai9xYWsxMTBuVkpvT1JsR1NYOHRBQ3cwTmJyMWpRU2JvS2N4V2xrYmx3YTFxQ1RZZUtNdVdwTUpqVDFxYS9SWWl2MlFYWDQ2eVJqQnZ4dFhseTIiLCJtYWMiOiJkMWU5Yzk0OGMyZDg1NDI5N2JiNWNmN2U5NDEwMzNlZWY3ZTkwYTVkMmMxNzkxMTcyYTEwOTBkOTUzMDM4ZjM2IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 13:56:38 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 3,\n    \"_seq_no\": 2,\n    \"_primary_term\": 1,\n    \"found\": true,\n    \"_source\": {\n        \"name\": \"Ümit\",\n        \"age\": 26,\n        \"message\": \"Hey whatsapp!\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Many Data To Table",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"ids\":[1,2,3]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/get-many-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"get-many-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data To Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/get-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"get-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:56:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 11:56:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "150"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xc4cdbae829a229ac80d54a5e4804a628"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Inc5Mk1FazVEWVBBNXFnVkwyLzV6WXc9PSIsInZhbHVlIjoidHMzY2Y3TlpSMXJtZjlQVUJJOUQxVjdYTW5RR21wd3lra0toaitVeThRb2l5ai9xYWsxMTBuVkpvT1JsR1NYOHRBQ3cwTmJyMWpRU2JvS2N4V2xrYmx3YTFxQ1RZZUtNdVdwTUpqVDFxYS9SWWl2MlFYWDQ2eVJqQnZ4dFhseTIiLCJtYWMiOiJkMWU5Yzk0OGMyZDg1NDI5N2JiNWNmN2U5NDEwMzNlZWY3ZTkwYTVkMmMxNzkxMTcyYTEwOTBkOTUzMDM4ZjM2IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 13:56:38 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 3,\n    \"_seq_no\": 2,\n    \"_primary_term\": 1,\n    \"found\": true,\n    \"_source\": {\n        \"name\": \"Ümit\",\n        \"age\": 26,\n        \"message\": \"Hey whatsapp!\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Data To Table",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/delete-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"delete-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Data To Table",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/delete-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"delete-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:17:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:17:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "142"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xabafe33fbf3d1801b5a9cdb9d206de5d"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Imt3ZnR2b3M4bDBNZjFzMENxR1k2b0E9PSIsInZhbHVlIjoiZXJhblZ5eGl6eGxVUFdzeVU4NVhXMUNFYmNPQnhJU0w3bytBbWtQbWhOQzc3N0M1Z3ZxYjhIU3JKNDl6R2VMRHZITkFrRWNJbk1FVUpKd2RvTnEvUThFYktzVHdNM25JR1dWTExBZ2Vsck1TU2YzM0dZYnZXZ0VzeUwrYkpJSlMiLCJtYWMiOiJkYjY1ZWIyNmZkOTRkNGI5ZDdkOWQ0MWNjMjJjOGQwZTAxOTU5M2Y1Yzg0ODRhZTU5NjM2M2I2Njk2ZjQ5ZjNlIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 14:17:37 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 5,\n    \"result\": \"deleted\",\n    \"_shards\": {\n        \"total\": 2,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"_seq_no\": 6,\n    \"_primary_term\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Many Data To Table",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"message\": \"hey\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/delete-many-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"delete-many-data-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Data To Table",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\":\"new-table\",\r\n     \"id\":1\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/delete-data-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"delete-data-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:17:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 12:17:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "142"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xabafe33fbf3d1801b5a9cdb9d206de5d"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Imt3ZnR2b3M4bDBNZjFzMENxR1k2b0E9PSIsInZhbHVlIjoiZXJhblZ5eGl6eGxVUFdzeVU4NVhXMUNFYmNPQnhJU0w3bytBbWtQbWhOQzc3N0M1Z3ZxYjhIU3JKNDl6R2VMRHZITkFrRWNJbk1FVUpKd2RvTnEvUThFYktzVHdNM25JR1dWTExBZ2Vsck1TU2YzM0dZYnZXZ0VzeUwrYkpJSlMiLCJtYWMiOiJkYjY1ZWIyNmZkOTRkNGI5ZDdkOWQ0MWNjMjJjOGQwZTAxOTU5M2Y1Yzg0ODRhZTU5NjM2M2I2Njk2ZjQ5ZjNlIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 14:17:37 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_index\": \"new-table\",\n    \"_id\": \"1\",\n    \"_version\": 5,\n    \"result\": \"deleted\",\n    \"_shards\": {\n        \"total\": 2,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"_seq_no\": 6,\n    \"_primary_term\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk Data To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"table\":\"new-table\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/bulk-data-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"bulk-data-to-table"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Term Search To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"kenan\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/term-search-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"term-search-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Term Search To Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"kenan\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/term-search-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"term-search-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 13:35:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 13:35:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "298"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X84b9130d98ca4e0fc59a6b7bbf961c8c"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InhYYUY3S29xcFZoZUFybG9SaEZGL2c9PSIsInZhbHVlIjoiWVNManZVSlBpbmRjanYxZDRHZXFGTlltSllLcTA1WnhvR01Cdk8wQUgrNDZrUnNzSDI2WE9OaW54TFlWdkJzN1BCdmNTSmJRWVZ6ODVCZmFhUFVwYWFsaVJEd2Z1T2dVQmxLRG1BajBVbkZjVzM0MGh3bkpaQzdxNG5yUnhLZ2siLCJtYWMiOiI3N2Y3ODdmOTNkZmI5OWRlMDIxMTc3NGZlYjFiZTM1MWUxOGIxOWE5NDY5M2E0MzBjYTg2YzZlNjUxMTRjNDg0IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 15:35:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 0,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 1,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1.2039728,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1.2039728,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"date\": \"27-11-2022\",\n                    \"message\": \"Elasticsearch dersleri\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Terms Search To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": [\"ümit\", \"kenan\"]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/terms-search-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"terms-search-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Terms Search To Table",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": [\"ümit\", \"kenan\"]\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/terms-search-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"terms-search-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 13:40:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 13:40:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "418"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X9a91bf61ce3a759ee66bf9b436349afd"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IkdML3pMM21FcU81bURodjhncGc3QUE9PSIsInZhbHVlIjoiL0ljNHdWcURIanVxQXNpSVRRV05pZ1RMOGVFMTBKM2NtaldEU2ZaZE4yYnN1T2M4V2NNM0R6UWxYM0dQcVFWWkt4cFZEN3JFL2x4SFZlTTUyK3owYW5veDBZUXI3c2JSWTZLRGRsQ05idktWMTQyM2Rsd2o3d2l4aldXTmZVbFkiLCJtYWMiOiJkY2E0ZTBkZGFmMWM0MmZmZGU5MTUwNTZlNzYyYTNjYWQ4ZTJlMGUxN2IwOThmMjBjNzFjMTdhM2RkY2FkMWY1IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 15:40:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 0,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 2,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"date\": \"27-11-2022\",\n                    \"message\": \"Elasticsearch dersleri\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"date\": \"27-11-2022\",\n                    \"message\": \"Elasticsearch dersleri\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Wildcard To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"search\": \"ke*\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/wildcard-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"wildcard-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Wildcard To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"search\": \"ke*\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/wildcard-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"wildcard-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:35:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:35:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "286"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xabc833b9cd932bff0700045b3d0d0723"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IkVBUDRnWUxxRzRCS0s4NWI0SnRnSFE9PSIsInZhbHVlIjoiTXg5UUxFRkpNU1ZiR1NFRVc2K3B1Q2lLekV0SUpUaHZtNVJma1hmVzN1U0dkWDc3akhweHNTOWcreUZMVVdsa0puS1J2MmhWeFQwbGx0K3dRVlppbzczSE5BUUZRZ3k4SnZOMWFOSGpXYXVScmlVRjJ3T2NHVUpFemJmdy9JQzIiLCJtYWMiOiIyM2RiNmQwYzVlOGU5Mzc1NzhlZTRlZTZhNmM1Y2U5NWQxZDU0ODY5MmNmMDljMTAxNTk3MzljYzZkY2RmYmUzIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 22:35:34 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 3,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 1,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"date\": \"27-11-2022\",\n                    \"message\": \"Elasticsearch dersleri\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Range To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"gte\": 19,\r\n     \"lte\": 35\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/range-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"range-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Range To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"gte\": 19,\r\n     \"lte\": 35\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/range-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"range-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:49:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:49:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "487"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xa331a53189281ae2984b93b4a812284e"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InFreGRnRnVBUDdiaVdEc2NIUU5pRFE9PSIsInZhbHVlIjoiWmwyWlRwMTl0bE5hdkFKNXhNK1dwN21FNjEyWjVoeWh1RWEwSlNGd3FpV09Yd0g5UXhGMWFGaHhEelVVQm0ram8vNFZCWXkvV2d4UitWUWZhM3dUSU1iZkN4OVFtU242THpWakp4V0Y1NENyOGhKQmlYbk1kV1ROM2UwYmkzM2giLCJtYWMiOiJiOWNkY2UwMTk2MmQzMWM2Y2Y4YWJmMmVlZGVhNjE2MDczMGVmMmEzY2EwYmFlZmQ5ZjUzOGQ3MmY4ZTEwNmU2IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 22:49:25 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"2\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kahraman\",\n                    \"age\": 26,\n                    \"message\": \"Hey Kahraman!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"age\": 19,\n                    \"message\": \"Hey Ümit!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"age\": 35,\n                    \"message\": \"Hey Kenan!\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Sort To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"order\": \"desc\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/sort-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"sort-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sort To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"order\": \"desc\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/sort-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"sort-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:56:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 20:56:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "527"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X40806c9953ec588b5b9640bb4446fac9"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlFDRXZLU0R2cjd3djByR1dNYS83TEE9PSIsInZhbHVlIjoiWWJMTnhtK0RIeXJJSkh6RVE4MDc4MW5GMlF6NkVjMXREbnVpYlg3UUlsSm9JK0tyeWtMNjh2eDJJMFM2RkNDTTBDM3ZRUE1pYWJSVUQzNDJ5VXI1Ynp0T0k5b2cwZVVlUTh0T1RQRHh4ajkzUGRQaENSL2JmMUQ1MG5qaUoxckEiLCJtYWMiOiI0NDE0MTNhZThmOWEzZjdkYmI3NWU3OWViMDBmZWU1OTJjN2U3ZGEzMmY4ZWI2ZjZiNTgzZmFkNjZkMTc0MDEzIiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 22:56:57 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 2,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": null,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"age\": 35,\n                    \"message\": \"Hey Kenan!\"\n                },\n                \"sort\": [\n                    35\n                ]\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"2\",\n                \"_score\": null,\n                \"_source\": {\n                    \"name\": \"Kahraman\",\n                    \"age\": 26,\n                    \"message\": \"Hey Kahraman!\"\n                },\n                \"sort\": [\n                    26\n                ]\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": null,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"age\": 19,\n                    \"message\": \"Hey Ümit!\"\n                },\n                \"sort\": [\n                    19\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "From Size To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"from\": 0,\r\n     \"size\": 3\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/from-size-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"from-size-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "From Size To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"from\": 0,\r\n     \"size\": 3\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/from-size-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"from-size-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 21:03:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 21:03:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "487"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X6ab22ced47faef6b00e032ecb3b86671"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImdmQ1ZSL0FyQ0RpNFNmZzROTjIyN2c9PSIsInZhbHVlIjoiWW43LzVaT0kzSUVWeE8yeXp1aWc0dUlQdERwdEZVSE5pUXVydkR0UkdHVEtyQVd5Q21SUTN2QzZndHRsWmRMaUdsZUErUkZXbkM3UzRUekRlcnZMaXU1UWJCL0FpcklVSUtiT3dMeWJheGd2cUE5WHhPTEJUaUFSOTZmbUZBSzUiLCJtYWMiOiIyZTg0ZWQwYjFkZDg5Njc1Yzg3ODRjMzkzZDgxNTFhMjk4NzRiYzk0N2ZiNDY3YTNkMmY1ZGViNDYwODkzZTY2IiwidGFnIjoiIn0%3D; expires=Sun, 27 Nov 2022 23:03:44 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"2\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kahraman\",\n                    \"age\": 26,\n                    \"message\": \"Hey Kahraman!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"age\": 19,\n                    \"message\": \"Hey Ümit!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"age\": 35,\n                    \"message\": \"Hey Kenan!\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Min Score To Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"min_score\": 0,\r\n     \"explain\": true,\r\n     \"name\": \"Ümit\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/min-score-to-table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"min-score-to-table"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Min Score To Table",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"min_score\": 0,\r\n     \"explain\": true,\r\n     \"name\": \"Ümit\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/min-score-to-table",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"min-score-to-table"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:14:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:14:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "1368"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X013f46c487702f21c26fd12b233b7334"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlBVRHJJd2M4MWc3RkZYODZIeXRqWlE9PSIsInZhbHVlIjoidFkxdlJXZERwdUF4OVptQVB0dnE1TlpHbkNZOUk3bTlsTGxpRXFjVEF0aDhvVityRG1Pdk9lQlkxVXprc0JBYkd0eWFQZjhVN2ZTVS9GQm1lcWlZNXQ3VXJ6cjQvWkxtZlJ1Q25QUDN2QTlPM0Q3c0R4cURXK216T0dlNVFSRFMiLCJtYWMiOiJkMTExNGM5ZjZlYzY4YjlkM2EzZmQ2MThkYzdjYTA1ZDkxMjQ2MjBkNjE4YjA1NmQxMjdiYWRlMTUxYmZlNzVjIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 10:14:50 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 1,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 0.6931471,\n        \"hits\": [\n            {\n                \"_shard\": \"[new-table][1]\",\n                \"_node\": \"iTbewSiJTFqJ0qcH0JlhGQ\",\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": 0.6931471,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"age\": 19,\n                    \"message\": \"Hey Ümit!\"\n                },\n                \"_explanation\": {\n                    \"value\": 0.6931471,\n                    \"description\": \"weight(name:Ümit in 1) [PerFieldSimilarity], result of:\",\n                    \"details\": [\n                        {\n                            \"value\": 0.6931471,\n                            \"description\": \"score(freq=1.0), computed as boost * idf * tf from:\",\n                            \"details\": [\n                                {\n                                    \"value\": 2.2,\n                                    \"description\": \"boost\",\n                                    \"details\": []\n                                },\n                                {\n                                    \"value\": 0.6931472,\n                                    \"description\": \"idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from:\",\n                                    \"details\": [\n                                        {\n                                            \"value\": 1,\n                                            \"description\": \"n, number of documents containing term\",\n                                            \"details\": []\n                                        },\n                                        {\n                                            \"value\": 2,\n                                            \"description\": \"N, total number of documents with field\",\n                                            \"details\": []\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"value\": 0.45454544,\n                                    \"description\": \"tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from:\",\n                                    \"details\": [\n                                        {\n                                            \"value\": 1,\n                                            \"description\": \"freq, occurrences of term within document\",\n                                            \"details\": []\n                                        },\n                                        {\n                                            \"value\": 1.2,\n                                            \"description\": \"k1, term saturation parameter\",\n                                            \"details\": []\n                                        },\n                                        {\n                                            \"value\": 0.75,\n                                            \"description\": \"b, length normalization parameter\",\n                                            \"details\": []\n                                        },\n                                        {\n                                            \"value\": 1,\n                                            \"description\": \"dl, length of field\",\n                                            \"details\": []\n                                        },\n                                        {\n                                            \"value\": 1,\n                                            \"description\": \"avgdl, average length of field\",\n                                            \"details\": []\n                                        }\n                                    ]\n                                }\n                            ]\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Validate Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"Ümit\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/validate-query",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"validate-query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validate Query",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"Ümit\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/validate-query",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"validate-query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:22:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:22:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "62"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X83fadb82c5d1c8cb4bf42a3cad568d38"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImpjTGtEZ3FMY3ozZmwxdHhyODBSNWc9PSIsInZhbHVlIjoibHJ0RmJKaWcyREZWU09TMzFXSEY2MG9pemUxTmczVUdZemdrWjV2V3lXVGc4QnZkaUNMb0pic2hGMEc5TWErM0syUW9MdUxoMUMwcEJoNmM4aUM0RTVyVHE2VngyQUJON2JCYzlweTNvaTB2aFZwSkF6VmRiWnlERHpBem1zUmgiLCJtYWMiOiIwNDk0ZWI5YmZmODM5MmNmNjc3ZGM1ZjBhNjhlZTc0N2NjOTVkNjE5ZTE2YWNmMjQwMmNkMzZjZjU5NWYzYTEwIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 10:22:38 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"failed\": 0\n    },\n    \"valid\": true\n}"
+						},
+						{
+							"name": "Validate Query",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"Ümit\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/validate-query",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"validate-query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:22:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:22:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X6b92f285f318faf79421957c14573ac1"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlhGWVdiMGFCRjdFNk9WR25GeDQ0TlE9PSIsInZhbHVlIjoiYnYyVTE4S21uZExYbTNBam1Ld2IrME9UMVZnR3BROGhWS3JEVHN0Vk1FcWE1azMrUGJabk01aC9aMGI4aXIxYWdFcEphMkhJei8wa3dXWG9DTEIyQzY5Z2JueGVhN1RvVzZZM09reWZ1UjhBWnd6SUlVaFRWWXVPbkNCSDJ2SGsiLCJtYWMiOiI1ZGMwMmRhZTYwYjIxNzU5MzAwMDIyZWNiMzI5ZjRmMmEyOWIyNWFjNmFlYTZjZmY3N2ZmYzM0YjNkNWEwYjYzIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 10:22:54 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"valid\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Query Count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"Ümit\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/get-query-count",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"get-query-count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Query Count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"name\": \"Ümit\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/get-query-count",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"get-query-count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:25:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 08:25:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "71"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xae9b34141ccaf3ee49469e6dc6048413"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImM2ZS9mTGxOaUtLV2FaOU90SjErN2c9PSIsInZhbHVlIjoibk1KUFJVeWpBeUdja2JTd3NYU25jT2pzLzdZK1duWkNjYk1CODN6TU1WL3o2ZERCaVBLZWxneWNROUJ2ZlI1aG9RbmF0L1NReHJHWXoya0dsb1lFOVJBWGg4N095YUozTnlPbnRmYTBzODd0ajRBMlJGVm1kVGFYTmZwM1JYUVgiLCJtYWMiOiJiNTk4ZjZhYjMwNjVmZWU3NWY4OTk5ZDc2YzdlZWEyMzYzN2Y0MmViYzNkMjNiMzk4MGQ2ZmQ2OWZlOThlYWViIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 10:25:37 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Aggregation",
+			"item": [
+				{
+					"name": "Aggregation Term List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"size\": 10\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-term-list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-term-list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation Term List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"size\": 10\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-term-list",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-term-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 09:35:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 09:35:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "364"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X169d219407cfc7048e46cdd867407e0c"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Imt1ZkdoTU96R2dHQ2twNWZvcklXOFE9PSIsInZhbHVlIjoiYlBNSlhROHA3QXhaOSsxQXhrYjZlUUd4TXdUVmdoSzd3TEtJK2pkQk13azBXMVQwbzg4cXFyTW9Nc3YwSmpFQWZkTS9zbzhldWw3akVvazBSYlhjWWExa09oMGlQTlJJbFlROSsyV01WVEtFekRySlpFZFhsU1Fvai93UnZDL24iLCJtYWMiOiJjYjg5YWVjOWY5Yjk1ZGRiYzRmMzMwMDk2NTI4OWRkOWFmYTAwMTcxODRkOWEzMGQ4ZTlhYWEzOTkyOTliOGM0IiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 11:35:31 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_name_groupping\": {\n            \"doc_count_error_upper_bound\": 0,\n            \"sum_other_doc_count\": 0,\n            \"buckets\": [\n                {\n                    \"key\": \"Kahraman\",\n                    \"doc_count\": 1\n                },\n                {\n                    \"key\": \"Kenan\",\n                    \"doc_count\": 1\n                },\n                {\n                    \"key\": \"Ümit\",\n                    \"doc_count\": 1\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation Min Max Sum Avg",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"size\": 10\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-min-max-sum-avg",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-min-max-sum-avg"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation Min Max Sum Avg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"size\": 10\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-min-max-sum-avg",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-min-max-sum-avg"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 09:48:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 09:48:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "632"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xd2b9617e4ad168e60af89e109b8fa2bf"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InRVcWdLU0VhRDNaZW5nYlNCaSt2SlE9PSIsInZhbHVlIjoiTjVQdVJsQXB2V3RkNUcwZHp2SnlFZEhtcGUvd0xPUno1LzJtdnFnc0RyQTlNN2ZRazAyOWVoWFhDUyszK3BGVjJOOCtDc2ZzT3dlQmgrMHkzV1pkQnRwdHhvNXcyV3o4V0JJMnc1eUwwUWVvM3ZkZk5FMklwdjhmWUpEaUNXdXIiLCJtYWMiOiIxOTA3ZjY2OGI0NWI5NzBmZGNlYjBiNWEwODUyMDQ1OTA5ZjNlYzRmNjFjNmY2ZjkyZWFjODkzODg2MWNmNzc5IiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 11:48:34 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 2,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"2\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kahraman\",\n                    \"age\": 26,\n                    \"message\": \"Hey Kahraman!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"3\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Ümit\",\n                    \"age\": 19,\n                    \"message\": \"Hey Ümit!\"\n                }\n            },\n            {\n                \"_index\": \"new-table\",\n                \"_id\": \"1\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Kenan\",\n                    \"age\": 35,\n                    \"message\": \"Hey Kenan!\"\n                }\n            }\n        ]\n    },\n    \"aggregations\": {\n        \"minimum_age\": {\n            \"value\": 19\n        },\n        \"total_age\": {\n            \"value\": 80\n        },\n        \"average_age\": {\n            \"value\": 26.666666666666668\n        },\n        \"maximum_age\": {\n            \"value\": 35\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-stats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-stats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation Stats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-stats",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-stats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:16:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:16:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "267"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xb602e4e80dce12b0bc43f1353a322d08"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InMyNEh6U1FzVllkS0trT21KR0sxWVE9PSIsInZhbHVlIjoiVWlSN1ovZEc5NGJGR3JJVHdqSTNkWm5GVXcyVlN3Tm9JeWhOell5L3BxRzlsMEZRTkdaSVJlUjJvc1gvWUpTTFpqMHd3aG9BeWg0dEd1TWV5MkRlZDVYU0lpQmpSNkZ6LzNBbTVQU2phMk1xek4zbm9XYTFUTkJaWWFVZzRtUE4iLCJtYWMiOiIzOTRmNDQ2YWEyMTM2ZjFkNDEyNGVkYTZlOTQ1NzE5MmQ1MmM5MTEyMTdhZDI5NjQ2YTUwZTZjOTc0YmM2MjgxIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 13:16:00 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"count\": 3,\n            \"min\": 19,\n            \"max\": 35,\n            \"avg\": 26.666666666666668,\n            \"sum\": 80\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation Extended Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-extended-stats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-extended-stats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation Extended Stats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-extended-stats",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-extended-stats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:20:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:20:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "745"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X209ca2c6f484d372c2b1aa7a83faf11f"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImFLc29adGkxdkhjdmxteFVBekxHK2c9PSIsInZhbHVlIjoiaVEvWnZERlNtczVmM0ljMW55SlAyOE5FQ0FvTkhiS0U5MmF6dC9lWEU4bWxLWDcrU004SW1jajA4MVhoZWg5dXBmT2NFZitUdzRBck9sOGFBTTVvbVV5YjNiT0RBdy9GVUJMbnNyK2g1OG5jVmhtdVN5dXVKLzFmSnBmMTFib3UiLCJtYWMiOiIyNTA1ZTJkYWFjNjVlMGU4YTk3Mzg0NTQ5YTQxMjQ0YTdmNDZiNGU1Yjg2OGEzNWUzZWZjYzcyY2E0MDI4NGRmIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 13:20:05 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"count\": 3,\n            \"min\": 19,\n            \"max\": 35,\n            \"avg\": 26.666666666666668,\n            \"sum\": 80,\n            \"sum_of_squares\": 2262,\n            \"variance\": 42.888888888888836,\n            \"variance_population\": 42.888888888888836,\n            \"variance_sampling\": 64.33333333333326,\n            \"std_deviation\": 6.54896090146283,\n            \"std_deviation_population\": 6.54896090146283,\n            \"std_deviation_sampling\": 8.020806277010639,\n            \"std_deviation_bounds\": {\n                \"upper\": 39.764588469592326,\n                \"lower\": 13.568744863741008,\n                \"upper_population\": 39.764588469592326,\n                \"lower_population\": 13.568744863741008,\n                \"upper_sampling\": 42.70827922068794,\n                \"lower_sampling\": 10.62505411264539\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation Extended Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-extended-stats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-extended-stats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation Extended Stats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-extended-stats",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-extended-stats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:20:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 11:20:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "745"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X209ca2c6f484d372c2b1aa7a83faf11f"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImFLc29adGkxdkhjdmxteFVBekxHK2c9PSIsInZhbHVlIjoiaVEvWnZERlNtczVmM0ljMW55SlAyOE5FQ0FvTkhiS0U5MmF6dC9lWEU4bWxLWDcrU004SW1jajA4MVhoZWg5dXBmT2NFZitUdzRBck9sOGFBTTVvbVV5YjNiT0RBdy9GVUJMbnNyK2g1OG5jVmhtdVN5dXVKLzFmSnBmMTFib3UiLCJtYWMiOiIyNTA1ZTJkYWFjNjVlMGU4YTk3Mzg0NTQ5YTQxMjQ0YTdmNDZiNGU1Yjg2OGEzNWUzZWZjYzcyY2E0MDI4NGRmIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 13:20:05 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"count\": 3,\n            \"min\": 19,\n            \"max\": 35,\n            \"avg\": 26.666666666666668,\n            \"sum\": 80,\n            \"sum_of_squares\": 2262,\n            \"variance\": 42.888888888888836,\n            \"variance_population\": 42.888888888888836,\n            \"variance_sampling\": 64.33333333333326,\n            \"std_deviation\": 6.54896090146283,\n            \"std_deviation_population\": 6.54896090146283,\n            \"std_deviation_sampling\": 8.020806277010639,\n            \"std_deviation_bounds\": {\n                \"upper\": 39.764588469592326,\n                \"lower\": 13.568744863741008,\n                \"upper_population\": 39.764588469592326,\n                \"lower_population\": 13.568744863741008,\n                \"upper_sampling\": 42.70827922068794,\n                \"lower_sampling\": 10.62505411264539\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation From Range",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-from-range",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-from-range"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation From Range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"table\": \"new-table\",\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-from-range",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-from-range"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:43:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:43:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "347"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xe05c1454c562721f7ec77f71b4f15e4c"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlpZVFpmS1dnbm1RN1gzNWdRVWJhWEE9PSIsInZhbHVlIjoiRWxEbUNwcFo0Qzl6SEludStvMVA3R0NjRGxjdzJRUmEvVStnb09uMXZaUzI2aHorL3NSMmk5SERsUzVxMzlPWlR6QU1yRXlwa2dkeVlRWDQwVXV3TGdWVGhEYXoxZXlOUTExbkg2ODBvOEhRUS9WZ1pIM1RxdFBTS2djaG9XUW0iLCJtYWMiOiIzZDAxZTE2MDI4M2FmZjM3OGVhMGZlYTNiNDcwZmE3MTE2MjM1OGU0ZThkZjlhZWM5MTIwNjUzNWJjNTEwMTEwIiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 16:43:34 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"buckets\": [\n                {\n                    \"key\": \"*-35.0\",\n                    \"to\": 35,\n                    \"doc_count\": 2\n                },\n                {\n                    \"key\": \"0.0-35.0\",\n                    \"from\": 0,\n                    \"to\": 35,\n                    \"doc_count\": 2\n                },\n                {\n                    \"key\": \"0.0-*\",\n                    \"from\": 0,\n                    \"doc_count\": 3\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation IP Addresses Range",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-ip-addresses-range",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-ip-addresses-range"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation IP Addresses Range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-ip-addresses-range",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-ip-addresses-range"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:47:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:47:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "399"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "Xe7b6b7cbd347f54f844b97d4bab044b0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImUrTUdRSjlKTU1BYUZzckk2a1AwL1E9PSIsInZhbHVlIjoiY3N6MGpXaHVVanltdlIzMmVITTNQbWlNUFdaYnMyQjlxZUgyUW9CZjR0bHJDbXRmTnlBWWowWVpwTThKbE1HQm9qdkZLQ0ZvSlVaTTkwdFdLTHdzdVljMFFabUlMdEJVbVRZRXYvY3l3NTdtcTZjY2p6K1Vrb0R3dXpoOTZINloiLCJtYWMiOiJjZmM1ZWNlNDJmZDg5ZjVjMzRlOTVjZTMyMDViMzdkNjQ1OTUwYjI3MGNlYTg4YmVmMzkwYmFlMTdlMjkwNDA5IiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 16:47:10 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 0,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 3,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"buckets\": [\n                {\n                    \"key\": \"*-10.0.0.5\",\n                    \"to\": \"10.0.0.5\",\n                    \"doc_count\": 0\n                },\n                {\n                    \"key\": \"10.0.0.5-10.0.0.100\",\n                    \"from\": \"10.0.0.5\",\n                    \"to\": \"10.0.0.100\",\n                    \"doc_count\": 0\n                },\n                {\n                    \"key\": \"10.0.0.100-*\",\n                    \"from\": \"10.0.0.100\",\n                    \"doc_count\": 0\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Aggregation IP Addresses Mask Range",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/elasticsearch/aggregation-ip-addresses-mask-range",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"elasticsearch",
+								"aggregation-ip-addresses-mask-range"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aggregation IP Addresses Mask Range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n     \"from\": 0,\r\n     \"to\": 35\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{novusbet_personal}}/elasticsearch/aggregation-ip-addresses-mask-range",
+									"host": [
+										"{{novusbet_personal}}"
+									],
+									"path": [
+										"elasticsearch",
+										"aggregation-ip-addresses-mask-range"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:52:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:52:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "X-elastic-product",
+									"value": "Elasticsearch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.elasticsearch+json;compatible-with=8"
+								},
+								{
+									"key": "content-length",
+									"value": "436"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X276fa7f6373e7e10fec46567c7ea8621"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InFyV2laTmpZUVVVQjlPM3dLTkVzZkE9PSIsInZhbHVlIjoiUm1GRU83TDU1VHZLVm15MlVyME5CY2Z2UzBwOTVVcWRRZjRqMkIyN3duZDRGRlZzbS9vQ0V2WFVxcUg4dHhzQzdvQTBqS0JRN2Z1SVZZcGxxV0lSYW9tSzZKR2w4VHZXYncxMVRic2NHdHozVDU5WnhYeEh3d3RmVkdSNnA5SjgiLCJtYWMiOiIzNWQ1ZjkwZWI0ZDQ0OGU3YTViMmU4ZDVjYTAwNzNjZjQ3MTMxMmU5YTVkYTk3YTU5ZTk2NTE2YTMxMjYzZGI2IiwidGFnIjoiIn0%3D; expires=Mon, 28 Nov 2022 16:52:58 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"took\": 1028,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 3,\n        \"successful\": 3,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 13,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": null,\n        \"hits\": []\n    },\n    \"aggregations\": {\n        \"custom_statistics\": {\n            \"buckets\": [\n                {\n                    \"key\": \"10.0.0.5/24\",\n                    \"from\": \"10.0.0.0\",\n                    \"to\": \"10.0.1.0\",\n                    \"doc_count\": 0\n                },\n                {\n                    \"key\": \"10.0.0.100/16\",\n                    \"from\": \"10.0.0.0\",\n                    \"to\": \"10.1.0.0\",\n                    \"doc_count\": 0\n                },\n                {\n                    \"key\": \"192.168.0.1/24\",\n                    \"from\": \"192.168.0.0\",\n                    \"to\": \"192.168.1.0\",\n                    \"doc_count\": 0\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
