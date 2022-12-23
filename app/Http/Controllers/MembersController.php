@@ -21,6 +21,7 @@ class MembersController extends ElasticsearchBaseController
 {
     public function insertDataFromFilesToMysql()
     {
+        Artisan::call('migrate:fresh');
         $files = File::files('json');
 
         foreach ($files as $file) {
