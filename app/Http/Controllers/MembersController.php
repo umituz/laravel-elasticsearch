@@ -207,9 +207,8 @@ class MembersController extends ElasticsearchBaseController
         dd("heree!", Artisan::call('elasticsearch:create-members-index-to-elasticsearch'));
     }
 
-    public function addMembersToElasticsearch()
+    public function addMembersDataToElasticsearch()
     {
-        dd("heree!", Artisan::call('elasticsearch:create-members-index-to-elasticsearch'));
-        dd("here", Artisan::call('elasticsearch:add-members-to-elasticsearch'));
+        dd("here", Artisan::call('elasticsearch:add-members-data-to-elasticsearch'));
     }
 }

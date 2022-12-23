@@ -2,9 +2,13 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Member;
 use App\Services\Elasticsearch\ElasticsearchService;
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\AuthenticationException;
+use Elastic\Elasticsearch\Exception\ClientResponseException;
+use Elastic\Elasticsearch\Exception\MissingParameterException;
+use Elastic\Elasticsearch\Exception\ServerResponseException;
 use Illuminate\Console\Command;
 
 /**
@@ -18,14 +22,14 @@ class AddMembersDataToElasticsearch extends Command
      *
      * @var string
      */
-    protected $signature = 'elasticsearch:add-members-to-elasticsearch';
+    protected $signature = 'elasticsearch:add-members-data-to-elasticsearch';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Add members to elasticsearch';
+    protected $description = 'Add members data to elasticsearch';
 
     private Client $client;
 
@@ -42,60 +46,32 @@ class AddMembersDataToElasticsearch extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @throws ClientResponseException
+     * @throws MissingParameterException
+     * @throws ServerResponseException
      */
     public function handle()
     {
         $indexName = 'uyeler';
 
-        $params = [
-            'index' => $indexName,
-            'body' => [
-                'settings' => [
-                    'number_of_shards' => 3,
-                    'number_of_replicas' => 2
+        $members = Member::orderByDesc('id')->take(10)->get();
+
+        foreach ($members as $member) {
+
+            $params = [
+                'index' => $indexName,
+                'id' => $member->id,
+                'timeout' => '5s',
+                'client' => [
+                    'timeout' => 6,
+                    'connect_timeout' => 1
                 ],
-                'mappings' => [
-                    '_source' => [
-                        'enabled' => true
-                    ],
-                    'properties' => [
-                        'isim' => [
-                            'type' => 'keyword'
-                        ],
-                        'soyad' => [
-                            'type' => 'keyword'
-                        ],
-                        'cinsiyet' => [
-                            'type' => 'keyword'
-                        ],
-                        'ulke' => [
-                            'type' => 'keyword'
-                        ],
-                        'ip_address' => [
-                            'type' => 'ip'
-                        ],
-                        'konum' => [
-                            'type' => 'geo_point'
-                        ],
-                        'dogum_tarihi' => [
-                            'type' => 'short'
-                        ],
-                        'yas' => [
-                            'type' => 'short'
-                        ],
-                        'ekleme_tarihi' => [
-                            'type' => 'long'
-                        ],
+                'body' => $member->getAttributes()
+            ];
 
-                    ]
-                ]
-            ]
-        ];
-
-        if (!$this->client->indices()->exists(["index" => $indexName])) {
-            $this->client->create($params);
+            $this->client->index($params);
         }
+
     }
 }
 

@@ -30,7 +30,7 @@ class CreateMembersIndexToElasticsearch extends Command
      *
      * @var string
      */
-    protected $description = 'Add members to elasticsearch';
+    protected $description = 'Create members index to elasticsearch';
 
     private Client $client;
 
