@@ -143,6 +143,14 @@ class MembersController extends ElasticsearchBaseController
 
         $baslangic_zamani = time();
 
+        if (!str_contains($tablo["terimler"], ',')) {
+            $durum["durum"] = false;
+            $durum["mesaj"] = "Islem Başarısız, Lütfen isimler arasına virgün koyunuz çoklu arama yapabilmek için";
+            $durum["elasticsearch"] = [];
+
+            return json_encode($durum);
+        }
+
         $sorgu = [
             'index' => 'uyeler',
             'type' => '_doc',
@@ -150,13 +158,13 @@ class MembersController extends ElasticsearchBaseController
             'body' => [
                 'query' => [
                     'terms' => [
-                        'isim' => $tablo["terimler"]
+                        'isim' => explode(',', $tablo["terimler"])
                     ]
                 ]
             ]
         ];
 
-        $sonuc = $this->client->search($sorgu);
+        $sonuc = $this->client->search($sorgu)->asArray();
 
         $durum["durum"] = true;
         $durum["mesaj"] = "Islem Basarili";
@@ -192,7 +200,7 @@ class MembersController extends ElasticsearchBaseController
             ]
         ];
 
-        $sonuc = $this->client->search($sorgu);
+        $sonuc = $this->client->search($sorgu)->asArray();
 
         $durum["durum"] = true;
         $durum["mesaj"] = "Islem Basarili";
