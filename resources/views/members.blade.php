@@ -31,7 +31,7 @@
                     $("table tbody,.arama_suresi,.arama_sonucu").text('')
 
                     $(".arama_suresi").text(sonuc.arama_suresi);
-                    $(".arama_sonucu").text(sonuc.elasticsearch.hits.total);
+                    $(".arama_sonucu").text(sonuc.elasticsearch.hits.total.value);
 
                     sonuc.elasticsearch.hits.hits.forEach(function (item) {
                         //console.log(item._source.soyad);

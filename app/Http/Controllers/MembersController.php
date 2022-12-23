@@ -100,7 +100,7 @@ class MembersController extends ElasticsearchBaseController
      * @throws ClientResponseException
      * @throws ServerResponseException
      */
-    public function term(Request $request): bool|string
+    public function term(Request $request)
     {
         $durum = array();
         $tablo = $request->all();
@@ -120,7 +120,7 @@ class MembersController extends ElasticsearchBaseController
             ]
         ];
 
-        $sonuc = $this->client->search($sorgu);
+        $sonuc = $this->client->search($sorgu)->asArray();
 
         $durum["durum"] = true;
         $durum["mesaj"] = "Islem Basarili";

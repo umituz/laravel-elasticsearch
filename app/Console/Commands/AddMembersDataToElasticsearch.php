@@ -54,7 +54,7 @@ class AddMembersDataToElasticsearch extends Command
     {
         $indexName = 'uyeler';
 
-        $members = Member::orderByDesc('id')->take(10)->get();
+        $members = Member::orderByDesc('id')->get();
 
         foreach ($members as $member) {
 
