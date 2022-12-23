@@ -14,6 +14,8 @@ Route::get('/', function () {
 });
 
 Route::controller(MembersController::class)->group(function () {
+    Route::get('/create-members-index-to-elasticsearch', 'createMembersIndexToElasticsearch');
+    Route::get('/add-members-to-elasticsearch', 'addMembersToElasticsearch');
     Route::get('/members-page', 'membersPage');
     Route::post('/members-search', 'membersSearch')->name('members.search');
     Route::post('/term', 'term')->name('members.term');

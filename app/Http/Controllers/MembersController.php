@@ -9,6 +9,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
@@ -201,4 +202,14 @@ class MembersController extends ElasticsearchBaseController
         return json_encode($durum);
     }
 
+    public function createMembersIndexToElasticsearch()
+    {
+        dd("heree!", Artisan::call('elasticsearch:create-members-index-to-elasticsearch'));
+    }
+
+    public function addMembersToElasticsearch()
+    {
+        dd("heree!", Artisan::call('elasticsearch:create-members-index-to-elasticsearch'));
+        dd("here", Artisan::call('elasticsearch:add-members-to-elasticsearch'));
+    }
 }
