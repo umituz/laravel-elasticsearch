@@ -4,11 +4,27 @@ use App\Http\Controllers\ElasticsearchTableController;
 use App\Http\Controllers\ElasticsearchTableDataAggregationController;
 use App\Http\Controllers\ElasticsearchTableDataController;
 use App\Http\Controllers\ElasticsearchTableDataSearchController;
+use App\Http\Controllers\MembersController;
+use App\Models\Member;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::controller(MembersController::class)->group(function () {
+    Route::get('/members', 'insertDataFromFilesToMysql');
+} );
+
+
+
+Route::get('/test', function () {
+
+    dd("test works");
+
+});
+
 
 Route::prefix('elasticsearch')->group(function () {
 

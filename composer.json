@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "nyholm/psr7": "^1.5",
+        "orangehill/iseed": "^3.0",
         "symfony/psr-http-message-bridge": "^2.1"
     },
     "require-dev": {
