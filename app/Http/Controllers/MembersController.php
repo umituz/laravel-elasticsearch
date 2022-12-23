@@ -68,32 +68,6 @@ class MembersController extends ElasticsearchBaseController
         return view('members');
     }
 
-    public function membersSearch()
-    {
-
-
-        $durum = array();
-        $client = $this->client;
-
-        /* bağlantı var mı, yok mu kontrol ediyoruz */
-        if (isset($_POST)) {
-
-            $tablo = array();
-            $tablo["adet"] = (int)@$_POST["adet"];
-            $tablo["terim"] = @$_POST["terim"];
-            $tablo["wildcard"] = @$_POST["wildcard"];
-            $tablo["terimler"] = @explode(",", $_POST["terimler"]);
-
-            call_user_func($_POST["islem"], $tablo);
-
-        } else {
-            $durum["sonuc"] = false;
-            $durum["mesaj"] = "Gerçersiz Post";
-        }
-
-        echo json_encode($durum);
-    }
-
     /**
      * @param Request $request
      * @return false|string

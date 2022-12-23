@@ -22,7 +22,7 @@ Route::controller(MembersController::class)->group(function () {
     Route::post('/terms', 'terms')->name('members.terms');
     Route::post('/wildcard', 'wildcard')->name('members.wildcard');
     Route::get('/insert-data-from-files-to-mysql', 'insertDataFromFilesToMysql');
-} );
+});
 
 Route::prefix('elasticsearch')->group(function () {
 
