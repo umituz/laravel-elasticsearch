@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Services\Elasticsearch\ElasticsearchService;
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\Exception\AuthenticationException;
@@ -24,5 +23,6 @@ class ElasticsearchBaseController extends Controller
     {
         $this->elasticsearchService = $elasticsearchService;
         $this->client = $this->elasticsearchService->getClient();
+        $this->elasticsearchService->enableErrorLogConfigurations();
     }
 }

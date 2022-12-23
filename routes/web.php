@@ -14,17 +14,13 @@ Route::get('/', function () {
 });
 
 Route::controller(MembersController::class)->group(function () {
-    Route::get('/members', 'insertDataFromFilesToMysql');
+    Route::get('/members-page', 'membersPage');
+    Route::post('/members-search', 'membersSearch')->name('members.search');
+    Route::post('/term', 'term')->name('members.term');
+    Route::post('/terms', 'terms')->name('members.terms');
+    Route::post('/wildcard', 'wildcard')->name('members.wildcard');
+    Route::get('/insert-data-from-files-to-mysql', 'insertDataFromFilesToMysql');
 } );
-
-
-
-Route::get('/test', function () {
-
-    dd("test works");
-
-});
-
 
 Route::prefix('elasticsearch')->group(function () {
 

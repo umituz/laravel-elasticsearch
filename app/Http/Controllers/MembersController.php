@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use Elastic\Elasticsearch\Exception\ClientResponseException;
+use Elastic\Elasticsearch\Exception\ServerResponseException;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
-class MembersController extends Controller
+/**
+ * Class MembersController
+ * @package App\Http\Controllers
+ */
+class MembersController extends ElasticsearchBaseController
 {
     public function insertDataFromFilesToMysql()
     {
@@ -37,25 +47,6 @@ class MembersController extends Controller
             $items = array_slice($items, 0, 1000);
         }
 
-//        foreach ($items as $item) {
-//
-//            $insert[] = [
-//                'userid' => User::current()->id,
-//                'lati' => $item[0],
-//                'long' => $item[1],
-//                'streetNumber' => $item[2],
-//                'streetName' => $item[3],
-//                'country' => $item[6],
-//                'state' => $item[5],
-//                'pcode' => $item[7],
-//                'suburb' => $suburb,
-//                'created_at' => new DateTime,
-//                'updated_at' => new DateTime
-//
-//            ];
-//
-//        }
-
         if (DB::table('members')->insert($items)) {
             if ($itemsTemp) {
                 $this->addData($itemsTemp);
@@ -67,4 +58,147 @@ class MembersController extends Controller
 
 
     }
+
+    /**
+     * @return Application|Factory|View
+     */
+    public function membersPage(): View|Factory|Application
+    {
+        return view('members');
+    }
+
+    public function membersSearch()
+    {
+
+
+        $durum = array();
+        $client = $this->client;
+
+        /* bağlantı var mı, yok mu kontrol ediyoruz */
+        if (isset($_POST)) {
+
+            $tablo = array();
+            $tablo["adet"] = (int)@$_POST["adet"];
+            $tablo["terim"] = @$_POST["terim"];
+            $tablo["wildcard"] = @$_POST["wildcard"];
+            $tablo["terimler"] = @explode(",", $_POST["terimler"]);
+
+            call_user_func($_POST["islem"], $tablo);
+
+        } else {
+            $durum["sonuc"] = false;
+            $durum["mesaj"] = "Gerçersiz Post";
+        }
+
+        echo json_encode($durum);
+    }
+
+    /**
+     * @param Request $request
+     * @return false|string
+     * @throws ClientResponseException
+     * @throws ServerResponseException
+     */
+    public function term(Request $request): bool|string
+    {
+        $durum = array();
+        $tablo = $request->all();
+
+        $baslangic_zamani = time();
+
+        $sorgu = [
+            'index' => 'uyeler',
+            'type' => '_doc',
+            'size' => $tablo["adet"],
+            'body' => [
+                'query' => [
+                    'term' => [
+                        'isim' => $tablo["terim"]
+                    ]
+                ]
+            ]
+        ];
+
+        $sonuc = $this->client->search($sorgu);
+
+        $durum["durum"] = true;
+        $durum["mesaj"] = "Islem Basarili";
+        $durum["arama_suresi"] = time() - $baslangic_zamani;
+        $durum["elasticsearch"] = $sonuc;
+
+        return json_encode($durum);
+    }
+
+    /**
+     * @param Request $request
+     * @return false|string
+     * @throws ClientResponseException
+     * @throws ServerResponseException
+     */
+    public function terms(Request $request): bool|string
+    {
+        $durum = array();
+        $tablo = $request->all();
+
+        $baslangic_zamani = time();
+
+        $sorgu = [
+            'index' => 'uyeler',
+            'type' => '_doc',
+            'size' => $tablo["adet"],
+            'body' => [
+                'query' => [
+                    'terms' => [
+                        'isim' => $tablo["terimler"]
+                    ]
+                ]
+            ]
+        ];
+
+        $sonuc = $this->client->search($sorgu);
+
+        $durum["durum"] = true;
+        $durum["mesaj"] = "Islem Basarili";
+        $durum["arama_suresi"] = time() - $baslangic_zamani;
+        $durum["elasticsearch"] = $sonuc;
+
+        return json_encode($durum);
+    }
+
+    /**
+     * @param Request $request
+     * @return false|string
+     * @throws ClientResponseException
+     * @throws ServerResponseException
+     */
+    public function wildcard(Request $request): bool|string
+    {
+        $durum = array();
+        $tablo = $request->all();
+
+        $baslangic_zamani = time();
+
+        $sorgu = [
+            'index' => 'uyeler',
+            'type' => '_doc',
+            'size' => $tablo["adet"],
+            'body' => [
+                'query' => [
+                    'wildcard' => [
+                        'isim' => $tablo["wildcard"]
+                    ]
+                ]
+            ]
+        ];
+
+        $sonuc = $this->client->search($sorgu);
+
+        $durum["durum"] = true;
+        $durum["mesaj"] = "Islem Basarili";
+        $durum["arama_suresi"] = time() - $baslangic_zamani;
+        $durum["elasticsearch"] = $sonuc;
+
+        return json_encode($durum);
+    }
+
 }

@@ -31,4 +31,14 @@ class ElasticsearchService
     {
         return ClientBuilder::create()->setHosts(['http://localhost:9200'])->build();
     }
+
+    /**
+     * @return void
+     */
+    public function enableErrorLogConfigurations(): void
+    {
+        ini_set('max_execution_time', 0);
+        error_reporting(E_ALL);
+        ini_set("display_errors", 1);
+    }
 }
