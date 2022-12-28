@@ -60,6 +60,20 @@ class ElasticsearchTableController extends ElasticsearchBaseController
     /**
      * @throws ServerResponseException
      * @throws ClientResponseException
+     * @throws MissingParameterException
+     */
+    public function deleteTables(Request $request)
+    {
+        $params = [
+            'index' => explode(',', $request->input('table'))
+        ];
+
+        return $this->client->indices()->delete($params);
+    }
+
+    /**
+     * @throws ServerResponseException
+     * @throws ClientResponseException
      */
     public function getTablesDetail()
     {

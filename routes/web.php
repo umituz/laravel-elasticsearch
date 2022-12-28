@@ -29,6 +29,7 @@ Route::prefix('elasticsearch')->group(function () {
     Route::controller(ElasticsearchTableController::class)->group(function () {
         Route::post('/create-table', 'createTable');
         Route::delete('/delete-table', 'deleteTable');
+        Route::delete('/delete-tables', 'deleteTables');
         Route::get('/get-tables-detail', 'getTablesDetail');
         Route::get('/get-all-tables', 'getAllTables');
     });
